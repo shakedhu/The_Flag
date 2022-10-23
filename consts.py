@@ -7,17 +7,21 @@ WINDOW_HEIGHT = 500
 SCREEN_NORMAL_COLOR = (69, 139, 0)
 SCREEN_MINE_COLOR = (3, 3, 3)
 MINE_LINES_COLOR = (69, 139, 0)
+START_MESSAGE = "Welcome to The Flag game. " \
+                "Have Fun!"
+START_MESSAGE_SIZE = 10
+START_MESSAGE_LOCATION = (0.2 * WINDOW_WIDTH, START_MESSAGE_SIZE / 2)
 
 MINE_NUM = 20
 
 FLAG_IMG = pygame.image.load("flag.png")
 FLAG_IMG = pygame.transform.scale(FLAG_IMG, (75, 50))
-NORMAL_PLAYER_IMG = "solider.png"
-SOLIDER_NIGHT_IMG = "solider_night.png"
-INJURY_IMG = "injury.png"
-MINE_IMG = "mine.png"
-GRASS_IMG = "grass.png"
-EXPLOTION_IMG = "explotion.png"
+NORMAL_PLAYER_IMG = pygame.image.load("solider.png")
+SOLIDER_NIGHT_IMG = pygame.image.load("solider_night.png")
+INJURY_IMG = pygame.image.load("injury.png")
+MINE_IMG = pygame.image.load("mine.png")
+GRASS_IMG = pygame.image.load("grass.png")
+EXPLOTION_IMG = pygame.image.load("explotion.png")
 
 FLAG_HEIGHT = 440
 FLAG_WIDTH = 920
@@ -37,11 +41,9 @@ START_PLAYER_MIDBOTTOM_Y = FLAG_Y + FLAG_HEIGHT
 WIN_MESSAGE = "You won!"
 WIN_FONT = "Calibri"
 WIN_FONT_SIZE = 20
-WIN_LOCATION = \
-    (0.2 * WINDOW_WIDTH, WINDOW_HEIGHT / 2 - (WIN_FONT_SIZE / 2))
+WIN_LOCATION = (0.2 * WINDOW_WIDTH, WINDOW_HEIGHT / 2 - (WIN_FONT_SIZE / 2))
 
 LOSE_MESSAGE = "You lost!"
 LOSE_FONT = "Calibri"
 LOSE_FONT_SIZE = 20
-LOSE_LOCATION = \
-    (0.2 * WINDOW_WIDTH, WINDOW_HEIGHT / 2 - (LOSE_FONT_SIZE / 2))
+LOSE_LOCATION = (0.2 * WINDOW_WIDTH, WINDOW_HEIGHT / 2 - (LOSE_FONT_SIZE / 2))
