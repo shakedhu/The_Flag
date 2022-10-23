@@ -3,6 +3,8 @@ import pygame
 import random
 import sys
 
+game_field = []
+
 screen = pygame.display.set_mode(
     (consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
 screen.fill(consts.SCREEN_NORMAL_COLOR)
@@ -10,6 +12,13 @@ pygame.display.flip()
 
 # caption
 pygame.display.set_caption('flag_game')
+
+def create_game_field():
+    global game_field
+    for i in range(consts.ROWS):
+        for j in range(consts.COLS):
+            game_field.append(j)
+
 
 def green_screen():
     pygame.init()
