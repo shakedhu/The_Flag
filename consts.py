@@ -10,8 +10,7 @@ SCREEN_MINE_COLOR = (3, 3, 3)
 
 FLAG_IMG = pygame.image.load("flag.png")
 FLAG_IMG = pygame.transform.scale(FLAG_IMG, (75, 50))
-NORMAL_PLAYER_IMG = pygame.image.load("solider.png")
-NORMAL_PLAYER_IMG = pygame.transform.scale(NORMAL_PLAYER_IMG, (25, 50))
+NORMAL_PLAYER_IMG = "solider.png"
 SOLIDER_NIGHT_IMG = "solider_night.png"
 INJURY_IMG = "injury.png"
 MINE_IMG = "mine.png"
