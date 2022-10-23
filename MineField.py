@@ -2,12 +2,24 @@
 import consts
 import pygame
 import sys
+import random
 
 def night_screen():
     screen = pygame.display.set_mode(
         (consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
     screen.fill(consts.SCREEN_MINE_COLOR)
 
+    def random_mines():
+        pygame.init()
+        imp = consts.MINE_IMG.convert()
+
+        imp = pygame.transform.scale(imp, (60, 20))
+        for i in range(20):
+            random_num_width = random.randint(0, consts.WINDOW_WIDTH - 75)
+            random_num_height = random.randint(0, consts.WINDOW_HEIGHT - 50)
+
+            screen.blit(imp, (random_num_width, random_num_height))
+    random_mines()
     def drawGrid():
         pygame.init()
         blockSize = 20  # Set the size of the grid block

@@ -7,6 +7,7 @@ WINDOW_HEIGHT = 500
 SCREEN_NORMAL_COLOR = (69, 139, 0)
 SCREEN_MINE_COLOR = (3, 3, 3)
 MINE_LINES_COLOR = (69, 139, 0)
+WIGHT = (248, 248, 255)
 START_MESSAGE = "Welcome to The Flag game. " \
                 "Have Fun!"
 START_MESSAGE_SIZE = 10
@@ -16,8 +17,8 @@ MINE_NUM = 20
 
 FLAG_IMG = pygame.image.load("flag.png")
 FLAG_IMG = pygame.transform.scale(FLAG_IMG, (75, 50))
-NORMAL_PLAYER_IMG = pygame.image.load("solider.png")
-SOLIDER_NIGHT_IMG = pygame.image.load("solider_night.png")
+NORMAL_PLAYER_IMG = pygame.image.load("soldier.png")
+SOLIDER_NIGHT_IMG = pygame.image.load("soldier_nigth.png")
 INJURY_IMG = pygame.image.load("injury.png")
 MINE_IMG = pygame.image.load("mine.png")
 GRASS_IMG = pygame.image.load("grass.png")
