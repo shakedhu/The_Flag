@@ -3,21 +3,13 @@ import pygame
 import random
 import sys
 
-# board_game = []
-# for row in range(consts.ROWS):
-#     for col in range(consts.COLS):
-#         board_game.append([row, col])
-# print(board_game)
-
-#caption
-pygame.display.set_caption('flag_game')
-
-
-
 screen = pygame.display.set_mode(
-        (consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
+    (consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
 screen.fill(consts.SCREEN_NORMAL_COLOR)
 pygame.display.flip()
+
+# caption
+pygame.display.set_caption('flag_game')
 
 def green_screen():
     pygame.init()
@@ -25,8 +17,8 @@ def green_screen():
 
     imp = pygame.transform.scale(imp, (75, 50))
     for i in range(20):
-        random_num_width = random.randint(0, consts.WINDOW_WIDTH-75)
-        random_num_height = random.randint(0, consts.WINDOW_HEIGHT-50)
+        random_num_width = random.randint(0, consts.WINDOW_WIDTH - 75)
+        random_num_height = random.randint(0, consts.WINDOW_HEIGHT - 50)
 
         screen.blit(imp, (random_num_width, random_num_height))
 
@@ -47,31 +39,33 @@ def green_screen():
 
     # deactivates the pygame library
     # pygame.quit()
-
-# green_screen()
-
-
-def night_screen():
-    BLACK = (0, 0, 0)
-    WHITE = (200, 200, 200)
-    screen.fill(BLACK)
-
-    def drawGrid():
-        blockSize = 400  # Set the size of the grid block
-        for x in range(0, consts.WINDOW_WIDTH, blockSize):
-            for y in range(0, consts.WINDOW_HEIGHT, blockSize):
-                rect = pygame.Rect(x, y, blockSize, blockSize)
-                pygame.draw.rect(screen, WHITE, rect, 1)
-
-    while True:
-        drawGrid()
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-
-        pygame.display.update()
+green_screen()
 
 
-    
 
+def draw_message(message, font_size, color, location):
+    font = pygame.font.SysFont(consts.WIN_FONT, font_size)
+    text_img = font.render(message, True, color)
+    screen.blit(text_img, location)
+
+
+def draw_welcome():
+    draw_message(consts.START_MESSAGE, consts.START_MESSAGE_SIZE, consts.WHITE,
+                 consts.START_MESSAGE_LOCATION)
+def draw_lose_message():
+    draw_message(consts.LOSE_MESSAGE, consts.LOSE_FONT_SIZE,
+                 consts.WHITE, consts.LOSE_LOCATION)
+
+
+def draw_win_message():
+    draw_message(consts.WIN_MESSAGE, consts.WIN_FONT_SIZE,
+                 consts.WHITE, consts.WIN_LOCATION)
+
+
+
+#
+# def draw_game():
+#     # draw_game()
+
+
+# draw_game()
