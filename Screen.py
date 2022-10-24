@@ -32,11 +32,11 @@ def draw_win_message():
                  consts.WHITE, consts.WIN_LOCATION)
 
 
-def create_game_field():
-    global game_field
-    for i in range(consts.ROWS):
-        for j in range(consts.COLS):
-            game_field.append(j)
+# def create_game_field():
+#     global game_field
+#     for i in range(consts.ROWS):
+#         for j in range(consts.COLS):
+#             game_field.append(j)
 
 
 def green_screen():
@@ -44,7 +44,7 @@ def green_screen():
 
     Solider.create_start_soldier()
 
-    imp = pygame.image.load("grass.png").convert_alpha()
+    imp = consts.GRASS_IMG.convert_alpha()
     imp1 = pygame.transform.scale(imp, (75, 50))
     for i in range(20):
         random_num_width = random.randint(0, consts.WINDOW_WIDTH - 75)
@@ -54,11 +54,11 @@ def green_screen():
         consts.SCREEN.blit(imp1, (random_num_width, random_num_height))
 
     # FLAG
-    FLAG_IMG = pygame.image.load("flag.png").convert_alpha()
-    FLAG_IMG_1 = pygame.transform.scale(FLAG_IMG, (80, 60))
+    flag_img = consts.FLAG_IMG.convert_alpha()
+    flag_img_1 = pygame.transform.scale(flag_img, (80, 60))
     height_coordinate_flag = 920
     width_coordinate_flag = 440
-    consts.SCREEN.blit(FLAG_IMG_1, (height_coordinate_flag, width_coordinate_flag))
+    consts.SCREEN.blit(flag_img_1, (height_coordinate_flag, width_coordinate_flag))
 
 
 
@@ -76,8 +76,9 @@ def green_screen():
             # and program both.
             if i.type == pygame.QUIT:
                 status = False
+            ReceptionFromUser.move_player()
 
     # deactivates the pygame library
-    # pygame.quit()
-    ReceptionFromUser.move_player()
+    pygame.quit()
+
 green_screen()
