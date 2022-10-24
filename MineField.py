@@ -4,12 +4,16 @@ import pygame
 import sys
 import random
 import sys
+import time
 
 start_location_solider = [[0, 0], [0, 20], [20, 0], [20, 20], [40, 0], [40, 20]] #המיקומים ההתחלתים של החיילים שלא יכולים להיות בהם מוקשים
 
 list_location_mines = []
 def night_screen():
     consts.SCREEN.fill(consts.SCREEN_MINE_COLOR)
+
+    def wait():
+        time.sleep(3)
 
     def create_start_night_soldier():
         soldier = pygame.transform.scale(consts.SOLDIER_NIGHT_IMG,
@@ -35,6 +39,8 @@ def night_screen():
             consts.SCREEN.blit(imp, (random_num_width, random_num_height))
 
             consts.SCREEN.blit(imp, (random_num_width, random_num_height))
+
+    wait()
     create_start_night_soldier()
     random_mines()
 

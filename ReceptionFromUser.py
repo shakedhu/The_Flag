@@ -35,11 +35,8 @@ def move_player():
                     current_player_location[1] -= 20
 
 def should_show_mine_field():
-    # FPS = 60
-    clock = pygame.time.Clock
     run = True
     while run:
-        # clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
