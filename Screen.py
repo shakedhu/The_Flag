@@ -1,8 +1,8 @@
 import consts
 import pygame
 import random
-import Solider
-import ReceptionFromUser  #זמני!!
+# import Solider
+
 
 game_field = []
 
@@ -42,7 +42,8 @@ def draw_win_message():
 def green_screen():
     pygame.init()
 
-    Solider.create_start_soldier()
+    soldier = pygame.transform.scale(consts.NORMAL_SOLDIER_IMG, (consts.START_PLAYER_WIDTH, consts.START_PLAYER_HEIGHT))
+    consts.SCREEN.blit(soldier, consts.START_PLAYER_POSITION)
 
     imp = consts.GRASS_IMG.convert_alpha()
     imp1 = pygame.transform.scale(imp, (75, 50))
@@ -67,16 +68,15 @@ def green_screen():
     status = True
     while (status):
 
-        # iterate over the list of Event objects
-        # that was returned by pygame.event.get() method.
-        for i in pygame.event.get():
 
-            # if event object type is QUIT
-            # then quitting the pygame
-            # and program both.
+        for i in pygame.event.get():
             if i.type == pygame.QUIT:
                 status = False
-            ReceptionFromUser.move_player()
+            elif i.type == pygame.K_KP_ENTER:
+                status = False
+
+
+
 
     # deactivates the pygame library
     pygame.quit()

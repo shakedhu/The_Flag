@@ -10,7 +10,6 @@ start_location_solider = [[0, 0], [0, 20], [20, 0], [20, 20], [40, 0], [40, 20]]
 list_location_mines = []
 def night_screen():
     consts.SCREEN.fill(consts.SCREEN_MINE_COLOR)
-    consts.SCREEN.fill(consts.SCREEN_MINE_COLOR)
 
     def create_start_night_soldier():
         soldier = pygame.transform.scale(consts.SOLDIER_NIGHT_IMG,
@@ -56,3 +55,4 @@ def night_screen():
 
         pygame.display.update()
 
+night_screen()
