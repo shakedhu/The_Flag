@@ -3,9 +3,10 @@ import consts
 import pygame
 import MineField
 
-# def create_start_soldier():
-#     soldier = pygame.transform.scale(consts.NORMAL_SOLDIER_IMG, (consts.START_PLAYER_WIDTH, consts.START_PLAYER_HEIGHT))
-#     consts.GREEN_SCREEN.blit(soldier, consts.START_PLAYER_POSITION)
+
+def create_start_soldier():
+    soldier = pygame.transform.scale(consts.NORMAL_SOLDIER_IMG, (consts.START_PLAYER_WIDTH, consts.START_PLAYER_HEIGHT))
+    consts.SCREEN.blit(soldier, consts.START_PLAYER_POSITION)
 
 def index_upper_body():
     location_solider = ReceptionFromUser.move_player()
