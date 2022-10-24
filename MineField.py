@@ -6,7 +6,6 @@ import random
 import sys
 
 start_location_solider = [[0, 0], [0, 20], [20, 0], [20, 20], [40, 0], [40, 20]] #המיקומים ההתחלתים של החיילים שלא יכולים להיות בהם מוקשים
-mine_field = []
 
 list_location_mines = []
 def night_screen():

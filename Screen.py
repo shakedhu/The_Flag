@@ -31,8 +31,6 @@ def draw_win_message():
     draw_message(consts.WIN_MESSAGE, consts.WIN_FONT_SIZE,
                  consts.WHITE, consts.WIN_LOCATION)
 
-print(consts.LOSE_MESSAGE, consts.LOSE_FONT_SIZE,
-                 consts.WHITE, consts.LOSE_LOCATION)
 
 def create_game_field():
     global game_field
