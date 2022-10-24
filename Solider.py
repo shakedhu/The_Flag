@@ -8,7 +8,6 @@ def create_start_soldier():
     soldier = pygame.transform.scale(consts.NORMAL_SOLDIER_IMG, (consts.START_PLAYER_WIDTH, consts.START_PLAYER_HEIGHT))
     consts.SCREEN.blit(soldier, consts.START_PLAYER_POSITION)
 
-
 def index_upper_body():
     location_solider = ReceptionFromUser.move_player()
     list_upper = []
@@ -19,7 +18,6 @@ def index_upper_body():
             location_solider = [x + (i * 20), y + (j * 20)]
             list_upper.append(location_solider)
     return list_upper
-
 
 def index_legs():
     location_solider = ReceptionFromUser.move_player()

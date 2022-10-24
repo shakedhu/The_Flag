@@ -30,7 +30,7 @@ def night_screen():
                 while random_num_width % 20 != 0 or j[0] == random_num_width:
                         random_num_width = random.randint(0, consts.WINDOW_WIDTH - 75)
             for f in start_location_solider:
-                while random_num_height % 20 != 0 or f[0] == random_num_height :
+                while random_num_height % 20 != 0 or f[0] == random_num_height:
                     random_num_height = random.randint(0, consts.WINDOW_HEIGHT - 50)
             list_location_mines.append([random_num_width, random_num_height])
             consts.SCREEN.blit(imp, (random_num_width, random_num_height))
@@ -56,4 +56,3 @@ def night_screen():
 
         pygame.display.update()
 
-night_screen()
