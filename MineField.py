@@ -1,5 +1,7 @@
+# import Screen
 import consts
 import pygame
+import sys
 import random
 import sys
 
@@ -8,6 +10,7 @@ mine_field = []
 
 list_location_mines = []
 def night_screen():
+    consts.SCREEN.fill(consts.SCREEN_MINE_COLOR)
     consts.SCREEN.fill(consts.SCREEN_MINE_COLOR)
 
     def create_start_night_soldier():
@@ -33,6 +36,7 @@ def night_screen():
             list_location_mines.append([random_num_width, random_num_height])
             consts.SCREEN.blit(imp, (random_num_width, random_num_height))
 
+            consts.SCREEN.blit(imp, (random_num_width, random_num_height))
     create_start_night_soldier()
     random_mines()
 
@@ -53,9 +57,4 @@ def night_screen():
 
         pygame.display.update()
 
-
 night_screen()
-
-# def list_of_mines_locations():
-#
-# def list_of_mines_locations():
