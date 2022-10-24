@@ -17,8 +17,8 @@ MINE_NUM = 20
 
 FLAG_IMG = pygame.image.load("flag.png")
 FLAG_IMG = pygame.transform.scale(FLAG_IMG, (75, 50))
-NORMAL_PLAYER_IMG = pygame.image.load("soldier.png")
-SOLIDER_NIGHT_IMG = pygame.image.load("soldier_nigth.png")
+NORMAL_SOLDIER_IMG = pygame.image.load("soldier.png")
+SOLDIER_NIGHT_IMG = pygame.image.load("soldier_nigth.png")
 INJURY_IMG = pygame.image.load("injury.png")
 MINE_IMG = pygame.image.load("mine.png")
 GRASS_IMG = pygame.image.load("grass.png")
@@ -32,12 +32,9 @@ FLAG_LOCATION = [FLAG_X, FLAG_Y]
 FLAG_MIDBOTTOM_X = FLAG_X + FLAG_WIDTH / 2
 FLAG_MIDBOTTOM_Y = FLAG_Y + FLAG_HEIGHT
 
-START_PLAYER_HEIGHT = 0
-START_PLAYER_WIDTH = 0
-START_PLAYER_X = WINDOW_WIDTH / 2 - (FLAG_WIDTH / 2)
-START_PLAYER_Y = WINDOW_HEIGHT * 0.8
-START_PLAYER_MIDBOTTOM_X = FLAG_X + FLAG_WIDTH / 2
-START_PLAYER_MIDBOTTOM_Y = FLAG_Y + FLAG_HEIGHT
+START_PLAYER_HEIGHT = 80
+START_PLAYER_WIDTH = 60
+START_PLAYER_POSITION = (0, 0)
 
 WIN_MESSAGE = "You won!"
 WIN_FONT = "Calibri"
