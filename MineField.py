@@ -1,13 +1,10 @@
-# import Screen
 import consts
 import pygame
 import sys
 import random
 
 def night_screen():
-    screen = pygame.display.set_mode(
-        (consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
-    screen.fill(consts.SCREEN_MINE_COLOR)
+    consts.SCREEN.fill(consts.SCREEN_MINE_COLOR)
 
     def random_mines():
         pygame.init()
@@ -18,7 +15,7 @@ def night_screen():
             random_num_width = random.randint(0, consts.WINDOW_WIDTH - 75)
             random_num_height = random.randint(0, consts.WINDOW_HEIGHT - 50)
 
-            screen.blit(imp, (random_num_width, random_num_height))
+            consts.SCREEN.blit(imp, (random_num_width, random_num_height))
     random_mines()
     def drawGrid():
         pygame.init()
@@ -26,7 +23,7 @@ def night_screen():
         for x in range(0, consts.WINDOW_WIDTH, blockSize):
             for y in range(0, consts.WINDOW_HEIGHT, blockSize):
                 rect = pygame.Rect(x, y, blockSize, blockSize)
-                pygame.draw.rect(screen, consts.MINE_LINES_COLOR, rect, 1)
+                pygame.draw.rect(consts.SCREEN, consts.MINE_LINES_COLOR, rect, 1)
 
     while True:
         drawGrid()

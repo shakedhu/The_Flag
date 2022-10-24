@@ -1,8 +1,6 @@
-import Solider
 import consts
 import pygame
 import random
-import sys
 
 game_field = []
 

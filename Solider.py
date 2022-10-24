@@ -3,7 +3,7 @@ import pygame
 
 def create_start_soldier():
     soldier = pygame.transform.scale(consts.NORMAL_SOLDIER_IMG, (consts.START_PLAYER_WIDTH, consts.START_PLAYER_HEIGHT))
-    pygame.Surface.blit(soldier, consts.NORMAL_SOLDIER_IMG, consts.START_PLAYER_POSITION)
+    consts.SCREEN.blit(soldier, consts.START_PLAYER_POSITION)
 
 def is_touching_flag(upper_part_location):
     for i in range(len(upper_part_location)):
