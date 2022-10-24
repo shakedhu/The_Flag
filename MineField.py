@@ -1,7 +1,5 @@
-# import Screen
 import consts
 import pygame
-import sys
 import random
 import sys
 import time
