@@ -2,10 +2,6 @@ import turtle
 from sys import exit
 import pygame
 import consts
-import keyboard
-
-
-current_player_location = consts.START_PLAYER_POSITION
 
 def stop():
     turtle.bye()
@@ -38,8 +34,6 @@ def move_player():
                 elif event.type == pygame.K_LEFT:
                     if current_player_location[1] != 0:
                         current_player_location[1] -= 20
-
-    return current_player_location
 
 def should_show_mine_field():
     for event in pygame.event.get():
