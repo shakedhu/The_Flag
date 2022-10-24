@@ -1,6 +1,8 @@
 import consts
 import pygame
 import random
+import Solider
+import ReceptionFromUser  #זמני!!
 
 game_field = []
 
@@ -79,4 +81,5 @@ def green_screen():
 
     # deactivates the pygame library
     # pygame.quit()
+    ReceptionFromUser.move_player()
 green_screen()
