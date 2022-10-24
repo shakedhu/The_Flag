@@ -60,12 +60,12 @@ def green_screen():
         draw_welcome()
         screen.blit(imp1, (random_num_width, random_num_height))
 
-        # FLAG
-        FLAG_IMG = pygame.image.load("flag.png").convert_alpha()
-        FLAG_IMG_1 = pygame.transform.scale(FLAG_IMG, (80, 60))
-        height_coordinate_flag = 920
-        width_coordinate_flag = 440
-        screen.blit(FLAG_IMG_1, (height_coordinate_flag, width_coordinate_flag))
+    # FLAG
+    FLAG_IMG = pygame.image.load("flag.png").convert_alpha()
+    FLAG_IMG_1 = pygame.transform.scale(FLAG_IMG, (80, 60))
+    height_coordinate_flag = 920
+    width_coordinate_flag = 440
+    screen.blit(FLAG_IMG_1, (height_coordinate_flag, width_coordinate_flag))
 
 
 
