@@ -6,9 +6,7 @@ import sys
 
 game_field = []
 
-screen = pygame.display.set_mode(
-    (consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
-screen.fill(consts.SCREEN_NORMAL_COLOR)
+consts.SCREEN.fill(consts.SCREEN_NORMAL_COLOR)
 pygame.display.flip()
 
 # caption
@@ -18,7 +16,7 @@ pygame.display.set_caption('flag_game')
 def draw_message(message, font_size, color, location):
     font = pygame.font.SysFont(consts.WIN_FONT, font_size)
     text_img = font.render(message, True, color)
-    screen.blit(text_img, location)
+    consts.SCREEN.blit(text_img, location)
 
 
 def draw_welcome():
@@ -46,10 +44,7 @@ def create_game_field():
 def green_screen():
     pygame.init()
 
-    # SOLIDER
-    imp_soldier = pygame.image.load("soldier.png").convert_alpha()
-    imp2 = pygame.transform.scale(imp_soldier, (80, 40))
-    screen.blit(imp2, (0, 0))
+    Solider.create_start_soldier()
 
     imp = pygame.image.load("grass.png").convert_alpha()
     imp1 = pygame.transform.scale(imp, (75, 50))
@@ -58,14 +53,14 @@ def green_screen():
         random_num_height = random.randint(0, consts.WINDOW_HEIGHT - 50)
 
         draw_welcome()
-        screen.blit(imp1, (random_num_width, random_num_height))
+        consts.SCREEN.blit(imp1, (random_num_width, random_num_height))
 
     # FLAG
     FLAG_IMG = pygame.image.load("flag.png").convert_alpha()
     FLAG_IMG_1 = pygame.transform.scale(FLAG_IMG, (80, 60))
     height_coordinate_flag = 920
     width_coordinate_flag = 440
-    screen.blit(FLAG_IMG_1, (height_coordinate_flag, width_coordinate_flag))
+    consts.SCREEN.blit(FLAG_IMG_1, (height_coordinate_flag, width_coordinate_flag))
 
 
 
